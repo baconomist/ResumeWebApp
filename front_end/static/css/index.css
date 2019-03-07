@@ -1,0 +1,97 @@
+.about
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    /* top, right and left, bottom padding */
+    padding: 1% 10% 10%;
+
+    /* Set to calibri, serif is default */
+    font-family: Calibri, serif;
+}
+
+.about > h1
+{
+    font-weight: bolder;
+    font-size: 5em;
+    font-style: italic;
+    line-height: 1.2em;
+}
+
+.about > h2
+{
+    font-family: "Times New Roman", serif;
+    font-weight: bolder;
+    font-size: 3em;
+    margin: 0;
+}
+
+.about > p
+{
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break: break-all;
+
+    font-size: 2em;
+    line-height: 0.8em;
+
+    margin: 0;
+}
+
+.about .intro
+{
+    padding: 10px;
+    display: inline-block;
+    border: 0.2em dashed #333333;
+}
+
+name
+{
+    color: #ff7b91;
+}
+
+page
+{
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+button.upbutton
+{
+    /* Doesn't show by default, needs to be activated in js code*/
+    display: none;
+
+    position: fixed;
+    right: 5vw;
+    bottom: 5vh;
+
+    width: 5vw;
+    height: 5vh;
+
+    border: none;
+    border-radius: 100%;
+    background-color: #4CAF50;
+    padding: 2%;
+}
+
+button.upbutton:active
+{
+    background-color: #51ca55;;
+}
+
+button.upbutton.visible
+{
+    display: block;
+}
+
+/* Keeps text on screen */
+.about > h1, .about h2{
+    width: 85vw;
+}
+.about > h1, .about > h2, .about > p
+{
+    margin-right: 10vw;
+}
