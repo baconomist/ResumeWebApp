@@ -28,11 +28,11 @@ function goToPage(event)
     if(Math.abs(corresponding_page.offset().top - $("body").offset().top)/$(window).height()*100 < 10)
         return;
 
-   /* $("html, body").on("mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+    $("html, body").on("mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
         // Stop animation if user is trying to scroll
         $("html, body").stop();
         console.log("aaaa");
-    });*/
+    });
 
     $("html, body").animate({
        scrollTop: corresponding_page.offset().top - $(corresponding_page.parent()).offset().top + $(corresponding_page.parent()).scrollTop()
@@ -45,6 +45,20 @@ function goToPage(event)
 }
 
 addNavClickListener(goToPage);
+
+
+function upButtonCheck()
+{
+    if($("body").scrollTop() > 0) {
+        $(".upbutton").addClass("show");
+        $(".upbutton").removeClass("hide");
+    }
+    else {
+        $(".upbutton").removeClass("show");
+        $(".upbutton").addClass("hide");
+    }
+}
+setInterval(upButtonCheck, 10);
 
 /*
 * slideshow.addOnSlideChangeListener(function ()

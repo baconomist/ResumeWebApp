@@ -59,10 +59,26 @@ page
     overflow: hidden;
 }
 
+@keyframes fadeout
+{
+    from
+    {
+        display: block;
+        opacity: 1;
+    }
+    to
+    {
+        display: none;
+        opacity: 0;
+    }
+}
+
 button.upbutton
 {
     /* Doesn't show by default, needs to be activated in js code*/
-    display: none;
+    animation: fadeout;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 
     position: fixed;
     right: 5vw;
@@ -75,6 +91,9 @@ button.upbutton
     border-radius: 100%;
     background-color: #4CAF50;
     padding: 2%;
+
+    background-image: url("../img/arrowup.png");
+    background-size: cover;
 }
 
 button.upbutton:active
@@ -82,8 +101,24 @@ button.upbutton:active
     background-color: #51ca55;;
 }
 
-button.upbutton.visible
+@keyframes buttonFadeIn {
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+
+button.upbutton.show
 {
+    animation: buttonFadeIn;
+    animation-duration: 2s;
+    /* Makes sure that the animation properties are kept*/
+    animation-fill-mode: forwards;
+
     display: block;
 }
 
