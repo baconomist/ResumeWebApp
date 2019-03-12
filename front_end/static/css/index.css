@@ -34,12 +34,12 @@
     word-break: break-all;
 
     font-size: 2em;
-    line-height: 0.8em;
+    line-height: 1em;
 
     margin: 0;
 }
 
-.about .intro
+.about #intro
 {
     padding: 10px;
     display: inline-block;
@@ -59,7 +59,7 @@ page
     overflow: hidden;
 }
 
-@keyframes fadeout
+@keyframes button-fadeout
 {
     from
     {
@@ -76,7 +76,7 @@ page
 button.upbutton
 {
     /* Doesn't show by default, needs to be activated in js code*/
-    animation: fadeout;
+    animation: button-fadeout;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 
@@ -120,6 +120,9 @@ button.upbutton.show
     animation-fill-mode: forwards;
 
     display: block;
+
+    /* Set cursor to "pointer"/"click" on mouseover */
+    cursor: pointer;
 }
 
 /* Keeps text on screen */
